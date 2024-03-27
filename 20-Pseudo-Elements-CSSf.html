@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+/* Standard syntax */
+::selection {
+  color: white;
+  background: blue;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  border: 2px solid red;
+  animation: blink 1s infinite alternate;
+}
+
+/* Firefox */
+::-moz-selection {
+  color: white;
+  background: blue;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  border: 2px solid red;
+  animation: blink 1s infinite alternate;
+}
+
+/* WebKit-based browsers */
+::-webkit-selection {
+  color: white;
+  background: blue;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  border: 2px solid red;
+  animation: blink 1s infinite alternate;
+}
+
+@keyframes blink {
+  from {
+    background: red;
+    color: white;
+  }
+  to {
+    background: yellow;
+    color: black;
+  }
+}
+</style>
+</head>
+<body>
+
+<h1>Select some text on this page:</h1>
+
+<p>This is a paragraph. Select some text here.</p>
+<div>Select some text in this div element.</div>
+
+</body>
+</html>

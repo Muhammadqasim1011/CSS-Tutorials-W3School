@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Navbar</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.0.7/css/boxicons.min.css">
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+    color: #fff;
+    position: relative;
+    z-index: 1000;
+  }
+
+  .navbar-logo {
+    font-size: 1.5rem;
+  }
+
+  .navbar-links {
+    display: flex;
+    gap: 20px;
+  }
+
+  .navbar-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+  }
+
+  .navbar-links a:hover {
+    color: #fff; /* Change to desired hover color */
+  }
+
+  .menu-icon {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+  @media screen and (max-width: 768px) {
+    .navbar-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      background-color: #333;
+      width: 100%;
+      transition: all 0.3s ease-in-out;
+      z-index: 999;
+    }
+
+    .navbar-links a {
+      padding: 10px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .menu-icon {
+      display: block;
+    }
+
+    .active {
+      display: flex;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="navbar">
+  <div class="navbar-logo">The Links</div>
+  <div class="navbar-links">
+    <a href="#">Google</a>
+    <a href="#">Facebook</a>
+    <a href="#">YouTube</a>
+    <a href="#">Fiver</a>
+    <a href="#">YouTube</a>
+    <a href="#">Fiver</a>
+    <a href="#">YouTube</a>
+    <a href="#">Fiver</a>
+  </div>
+  <i class="bx bx-menu menu-icon"></i>
+</div>
+
+<script>
+  const menuIcon = document.querySelector('.menu-icon');
+  const navbarLinks = document.querySelector('.navbar-links');
+
+  menuIcon.addEventListener('click', () => {
+    navbarLinks.classList.toggle('active');
+  });
+</script>
+
+</body>
+</html>
